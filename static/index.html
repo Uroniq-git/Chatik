@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <title>Chat</title>
+</head>
+<body>
+    <div class="popup">
+        <div class="popup-container">
+            <div class="popum-tittle">Введите имя:</div>
+            <input type="text" id="popup-input" class="popup-input">
+            <button class="popup-buttn"  id="popup-buttn" onclick="popup_accept()">Погнали!</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="chat-head-circle"></div>
+                <div class="chat-head-tittle">Журкин | Учимся писать код</div>
+            </div>
+            <hr>
+            <div class="msg-box" id="msg-box">
+                
+            </div>
+            <!-- 
+                <div class="msg-container">
+                    <div class="msg-user-name">Юзер</div>
+                    <div class="msg-text-container">
+                        <div class="msg-text">Всем привет!</div>
+                    </div>
+                </div>
+             -->
+            <div class="send-msg-container">
+                <input type="text" class="msg-input" id="msg-input" placeholder="Введите сообшение">
+                <button class="msg-button" id="msg-button" onclick="msg_send()"><img src="img/send.svg" alt=""></button>
+            </div>
+    
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
